@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
+		408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
+		408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
+		408651C42A7ECEB100EDDEE2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* PostService.swift */; };
+		408651C62A7EE07500EDDEE2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* PostService.swift */; };
+		408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
+		40D06B952A7DB6D700210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
+		40D06B962A7DB81200210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
+		40D06B982A7DBAD600210207 /* MockPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D06B972A7DBAD600210207 /* MockPostService.swift */; };
+		40D06B992A7DBFE200210207 /* MockPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D06B972A7DBAD600210207 /* MockPostService.swift */; };
+		40D06B9B2A7DC06500210207 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B9A2A7DC06500210207 /* README.md */; };
+		40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DC92A7B0E4A00992D40 /* BiolerplateV1App.swift */; };
+		40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */; };
+		40FA6DCE2A7B0E4D00992D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */; };
+		40FA6DD12A7B0E4D00992D40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */; };
+		40FA6DD82A7B0EB300992D40 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */; };
+		40FA6DDA2A7B0ED300992D40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* PostModel.swift */; };
+		40FA6DE42A7B100A00992D40 /* BiolerplateV1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */; };
+		40FA6DEA2A7B205F00992D40 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */; };
+		40FA6DEB2A7B206300992D40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* PostModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40FA6DE52A7B100A00992D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40FA6DBE2A7B0E4A00992D40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40FA6DC52A7B0E4A00992D40;
+			remoteInfo = BiolerplateV1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		408651BE2A7E8F9300EDDEE2 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		408651C32A7ECEB100EDDEE2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		408651C52A7ED29100EDDEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		40D06B902A7DB1D100210207 /* SamplePost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePost.json; sourceTree = "<group>"; };
+		40D06B972A7DBAD600210207 /* MockPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostService.swift; sourceTree = "<group>"; };
+		40D06B9A2A7DC06500210207 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		40FA6DC62A7B0E4A00992D40 /* BiolerplateV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiolerplateV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FA6DC92A7B0E4A00992D40 /* BiolerplateV1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolerplateV1App.swift; sourceTree = "<group>"; };
+		40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		40FA6DD92A7B0ED300992D40 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiolerplateV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolerplateV1Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40FA6DC32A7B0E4A00992D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FA6DDE2A7B100A00992D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		408651C82A7F04D100EDDEE2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		408651C92A7F04F600EDDEE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		40D06B8E2A7DA57600210207 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				408651BE2A7E8F9300EDDEE2 /* APIError.swift */,
+				40D06B972A7DBAD600210207 /* MockPostService.swift */,
+				408651C32A7ECEB100EDDEE2 /* PostService.swift */,
+				408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		40D06B8F2A7DA57D00210207 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DD92A7B0ED300992D40 /* PostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40FA6DBD2A7B0E4A00992D40 = {
+			isa = PBXGroup;
+			children = (
+				40D06B9A2A7DC06500210207 /* README.md */,
+				40FA6DC82A7B0E4A00992D40 /* BiolerplateV1 */,
+				40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */,
+				40FA6DC72A7B0E4A00992D40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40FA6DC72A7B0E4A00992D40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DC62A7B0E4A00992D40 /* BiolerplateV1.app */,
+				40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40FA6DC82A7B0E4A00992D40 /* BiolerplateV1 */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DC92A7B0E4A00992D40 /* BiolerplateV1App.swift */,
+				408651C92A7F04F600EDDEE2 /* Views */,
+				40D06B8F2A7DA57D00210207 /* Models */,
+				408651C82A7F04D100EDDEE2 /* ViewModels */,
+				40D06B8E2A7DA57600210207 /* Networking */,
+				408651C52A7ED29100EDDEE2 /* Info.plist */,
+				40D06B902A7DB1D100210207 /* SamplePost.json */,
+				40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */,
+				40FA6DCF2A7B0E4D00992D40 /* Preview Content */,
+			);
+			path = BiolerplateV1;
+			sourceTree = "<group>";
+		};
+		40FA6DCF2A7B0E4D00992D40 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */,
+			);
+			path = BiolerplateV1Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40FA6DC52A7B0E4A00992D40 /* BiolerplateV1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FA6DD42A7B0E4D00992D40 /* Build configuration list for PBXNativeTarget "BiolerplateV1" */;
+			buildPhases = (
+				40FA6DC22A7B0E4A00992D40 /* Sources */,
+				40FA6DC32A7B0E4A00992D40 /* Frameworks */,
+				40FA6DC42A7B0E4A00992D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiolerplateV1;
+			productName = BiolerplateV1;
+			productReference = 40FA6DC62A7B0E4A00992D40 /* BiolerplateV1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		40FA6DE02A7B100A00992D40 /* BiolerplateV1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FA6DE72A7B100A00992D40 /* Build configuration list for PBXNativeTarget "BiolerplateV1Tests" */;
+			buildPhases = (
+				40FA6DDD2A7B100A00992D40 /* Sources */,
+				40FA6DDE2A7B100A00992D40 /* Frameworks */,
+				40FA6DDF2A7B100A00992D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40FA6DE62A7B100A00992D40 /* PBXTargetDependency */,
+			);
+			name = BiolerplateV1Tests;
+			productName = BiolerplateV1Tests;
+			productReference = 40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40FA6DBE2A7B0E4A00992D40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					40FA6DC52A7B0E4A00992D40 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					40FA6DE02A7B100A00992D40 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 40FA6DC52A7B0E4A00992D40;
+					};
+				};
+			};
+			buildConfigurationList = 40FA6DC12A7B0E4A00992D40 /* Build configuration list for PBXProject "BiolerplateV1" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 40FA6DBD2A7B0E4A00992D40;
+			productRefGroup = 40FA6DC72A7B0E4A00992D40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40FA6DC52A7B0E4A00992D40 /* BiolerplateV1 */,
+				40FA6DE02A7B100A00992D40 /* BiolerplateV1Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40FA6DC42A7B0E4A00992D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FA6DD12A7B0E4D00992D40 /* Preview Assets.xcassets in Resources */,
+				40FA6DCE2A7B0E4D00992D40 /* Assets.xcassets in Resources */,
+				40D06B9B2A7DC06500210207 /* README.md in Resources */,
+				40D06B952A7DB6D700210207 /* SamplePost.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FA6DDF2A7B100A00992D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40D06B962A7DB81200210207 /* SamplePost.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40FA6DC22A7B0E4A00992D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FA6DD82A7B0EB300992D40 /* PostViewModel.swift in Sources */,
+				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
+				40D06B982A7DBAD600210207 /* MockPostService.swift in Sources */,
+				408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */,
+				40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */,
+				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
+				408651C42A7ECEB100EDDEE2 /* PostService.swift in Sources */,
+				40FA6DDA2A7B0ED300992D40 /* PostModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40FA6DDD2A7B100A00992D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FA6DEB2A7B206300992D40 /* PostModel.swift in Sources */,
+				408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */,
+				40FA6DEA2A7B205F00992D40 /* PostViewModel.swift in Sources */,
+				408651C62A7EE07500EDDEE2 /* PostService.swift in Sources */,
+				40FA6DE42A7B100A00992D40 /* BiolerplateV1Tests.swift in Sources */,
+				408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */,
+				40D06B992A7DBFE200210207 /* MockPostService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40FA6DE62A7B100A00992D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40FA6DC52A7B0E4A00992D40 /* BiolerplateV1 */;
+			targetProxy = 40FA6DE52A7B100A00992D40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40FA6DD22A7B0E4D00992D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		40FA6DD32A7B0E4D00992D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		40FA6DD52A7B0E4D00992D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BiolerplateV1/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BiolerplateV1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40FA6DD62A7B0E4D00992D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BiolerplateV1/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BiolerplateV1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		40FA6DE82A7B100A00992D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiolerplateV1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BiolerplateV1";
+			};
+			name = Debug;
+		};
+		40FA6DE92A7B100A00992D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BiolerplateV1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BiolerplateV1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40FA6DC12A7B0E4A00992D40 /* Build configuration list for PBXProject "BiolerplateV1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FA6DD22A7B0E4D00992D40 /* Debug */,
+				40FA6DD32A7B0E4D00992D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FA6DD42A7B0E4D00992D40 /* Build configuration list for PBXNativeTarget "BiolerplateV1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FA6DD52A7B0E4D00992D40 /* Debug */,
+				40FA6DD62A7B0E4D00992D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FA6DE72A7B100A00992D40 /* Build configuration list for PBXNativeTarget "BiolerplateV1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FA6DE82A7B100A00992D40 /* Debug */,
+				40FA6DE92A7B100A00992D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40FA6DBE2A7B0E4A00992D40 /* Project object */;
+}
