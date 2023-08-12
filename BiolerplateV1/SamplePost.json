@@ -2,14 +2,11 @@
   {
     "id": 1,
     "title": "Test Title 1",
-    "body": "Test Body 1",
-    "favourite" : false
+    "body": "Test Body 1"
   },
   {
     "id": 2,
     "title": "Test Title 2",
-    "body": "Test Body 2",
-    "favourite" : true
-
+    "body": "Test Body 2"
   }
 ]

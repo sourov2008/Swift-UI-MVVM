@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PostListView: View {
+    
     @StateObject private var viewModel = PostViewModel(service: PostService())
-    @State private var selectedPost: PostModel?
 
     var body: some View {
         NavigationView {
@@ -21,20 +21,11 @@ struct PostListView: View {
                 } else {
                     List(viewModel.posts) { post in
                         VStack(alignment: .leading) {
-                            HStack {
-                                Text(post.title)
-                                    .font(.headline)
-                                if post.favourite == true {
-                                    Image(systemName: "star.fill")
-                                        .foregroundColor(.yellow)
-                                }
-                            }
+                            Text(post.title)
+                                .font(.headline)
                             Text(post.body)
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
-                        }
-                        .onTapGesture {
-                            selectedPost = post
                         }
                     }
                 }
@@ -44,12 +35,12 @@ struct PostListView: View {
                 Task {
                     await viewModel.fetchPosts()
                 }
-            }
-            .sheet(item: $selectedPost) { post in
-                DetailsView(viewModel: viewModel, post: post)
+                
             }
         }
     }
+
+    
 }
 
 
@@ -66,8 +57,8 @@ struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = PostViewModel(service: MockPostService())
         viewModel.posts = [
-            PostModel(id: 1, title: "Test Title 1", body: "Test Body 1", favourite: false),
-            PostModel(id: 2, title: "Test Title 2", body: "Test Body 2", favourite: false)
+            PostModel(id: 1, title: "Test Title 1", body: "Test Body 1"),
+            PostModel(id: 2, title: "Test Title 2", body: "Test Body 2")
         ]
 
         return PostListView().environmentObject(viewModel)

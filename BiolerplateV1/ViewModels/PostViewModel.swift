@@ -40,14 +40,4 @@ class PostViewModel: ObservableObject {
 
            }
        }
-    
-    
-    func markAsFavorite(post: PostModel) {
-        guard let index = posts.firstIndex(where: { $0.id == post.id }) else {
-            return
-        }
-
-        posts[index].favourite = true
-    }
-    
 }

@@ -7,12 +7,9 @@
 
 import Foundation
 
-struct PostModel: Codable, Identifiable, Equatable {
+struct PostModel: Codable, Identifiable {
     
     let id: Int
     let title: String
     let body: String
-    var favourite: Bool? = false
-    
-
 }
