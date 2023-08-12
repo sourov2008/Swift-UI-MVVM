@@ -39,6 +39,26 @@ final class PostViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.errorMessage, "Failed to fetch posts: \(mockError.getErrorMessage())", "errorMessage should match the error message")
         
     }
+    
+    
+    func testMarkAsFavourite() async {
+        // Given
+        let viewModel = PostViewModel(service: MockPostService())
+
+        // When
+        await viewModel.fetchPosts()
+        
+        // target first index.
+        var firstIndex = viewModel.posts[0] // curretnly fav as false
+
+        // When: We mark post1 as favorite
+         viewModel.markAsFavorite(post: firstIndex)
+         firstIndex = viewModel.posts[0] // This supposed to now true
+
+        // Then: The favorite status of post1 should be toggled
+        XCTAssertTrue(firstIndex.favourite == true, "firstIndex should be marked as favorite")
+    }
+    
 }
 
 class ErrorMockService: ServiceProtocol {

@@ -13,6 +13,7 @@
 		408651C42A7ECEB100EDDEE2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* PostService.swift */; };
 		408651C62A7EE07500EDDEE2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* PostService.swift */; };
 		408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
+		408651E52A802BDB00EDDEE2 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651E42A802BDB00EDDEE2 /* DetailsView.swift */; };
 		40D06B952A7DB6D700210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
 		40D06B962A7DB81200210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
 		40D06B982A7DBAD600210207 /* MockPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D06B972A7DBAD600210207 /* MockPostService.swift */; };
@@ -44,6 +45,7 @@
 		408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		408651C32A7ECEB100EDDEE2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		408651C52A7ED29100EDDEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		408651E42A802BDB00EDDEE2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		40D06B902A7DB1D100210207 /* SamplePost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePost.json; sourceTree = "<group>"; };
 		40D06B972A7DBAD600210207 /* MockPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostService.swift; sourceTree = "<group>"; };
 		40D06B9A2A7DC06500210207 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */,
+				408651E42A802BDB00EDDEE2 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FA6DD82A7B0EB300992D40 /* PostViewModel.swift in Sources */,
+				408651E52A802BDB00EDDEE2 /* DetailsView.swift in Sources */,
 				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40D06B982A7DBAD600210207 /* MockPostService.swift in Sources */,
 				408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */,
