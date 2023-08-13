@@ -12,7 +12,7 @@ final class PostViewModelTests: XCTestCase {
 
     func testFetchPosts() async {
         // Given
-        let viewModel = PostViewModel(service: MockPostService())
+        let viewModel = PostViewModel(service: MockProductService())
 
         // When
         await viewModel.fetchPosts()

@@ -7,13 +7,20 @@
 
 import Foundation
 
-class MockPostService: ServiceProtocol {
+class MockProductService: ServiceProtocol {
     
     func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
+        guard readJSONFromFile(named: "SamplePost") != nil else {
+            completion(.failure(.invalidData))
+            return
+        }
+        
         guard let jsonData = readJSONFromFile(named: "SamplePost") else {
             completion(.failure(.invalidData))
             return
         }
+        
+        
         
         do {
             let decoder = JSONDecoder()

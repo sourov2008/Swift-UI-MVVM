@@ -49,7 +49,7 @@ struct PostListView: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = PostViewModel(service: MockPostService())
+        let viewModel = PostViewModel(service: MockProductService())
         return PostListView().environmentObject(viewModel)
     }
 }

@@ -41,5 +41,37 @@ struct ProductModel: Codable {
     let header: Header
     let filters: [String]
     let products: [Product]
+    
+    
+//    static var stubs : ProductModel{
+//        let data: ProductModel = DummyJSONToModel().decodeJSONFromFile(fileName: "defaultData") as! ProductModel
+//    }
+    
+//    static let ProductModelDefautls : ProductModel = DummyJSONToModel().decodeJSONFromFile(fileName: "SamplePost") as! ProductModel
+//
+//    // You can call the function like this:
+//    if let data: ProductModel = decodeJSONFromFile(fileName: "defaultData") {
+//        // Use the decoded data
+//        print("Loaded data: \(data)")
+//    } else {
+//        print("Failed to load data")
+//    }
+    
+    
 }
+
+struct ProductDummyModel {
+    static let product: ProductModel = {
+        if let defaultData: ProductModel = DummyJSONToModel(fileName: "SamplePost") {
+            return defaultData
+        } else {
+            fatalError("Failed to load default data")
+        }
+    }()
+}
+
+
+
+ 
+
 
