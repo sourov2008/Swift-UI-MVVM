@@ -9,7 +9,7 @@ import Foundation
 
  
     // Define a generic function that takes a JSON file name and returns a Codable struct
-    func DummyJSONToModel<T: Codable>(fileName: String) -> T? {
+    func readJSONFromFile<T: Codable>(fileName: String) -> T? {
         if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path))

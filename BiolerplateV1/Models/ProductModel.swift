@@ -62,7 +62,7 @@ struct ProductModel: Codable {
 
 struct ProductDummyModel {
     static let product: ProductModel = {
-        if let defaultData: ProductModel = DummyJSONToModel(fileName: "SamplePost") {
+        if let defaultData: ProductModel = readJSONFromFile(fileName: "SamplePost") {
             return defaultData
         } else {
             fatalError("Failed to load default data")

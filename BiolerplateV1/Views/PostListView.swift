@@ -41,16 +41,19 @@ struct PostListView: View {
 //struct PostListView_Mock_Previews: PreviewProvider {
 //    static var previews: some View {
 //        // Use the mock service for previews
-//        let viewModel = PostViewModel(service: MockPostService())
+//        let data = ProductDummyModel.product
+//        let viewModel = PostViewModel(service: MockProductService())
+//
+//        let viewModel = data.products
 //        return PostListView().environmentObject(viewModel)
 //    }
 //}
 
 
-struct PostListView_Previews: PreviewProvider {
+struct PostListView_RealPreviews: PreviewProvider {
     static var previews: some View {
         let viewModel = PostViewModel(service: MockProductService())
-        return PostListView().environmentObject(viewModel)
+        //        return PostListView().environmentObject(viewModel)
     }
 }
 
