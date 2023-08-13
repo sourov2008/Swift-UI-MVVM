@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		408472862A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
+		408472872A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
 		408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
 		408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
 		408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		408472852A89960600D2E9CF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		408651BE2A7E8F9300EDDEE2 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		408651C32A7ECEB100EDDEE2 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */,
+				408472852A89960600D2E9CF /* Constant.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -288,6 +292,7 @@
 				40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */,
 				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
 				408651C42A7ECEB100EDDEE2 /* ProductService.swift in Sources */,
+				408472862A89960600D2E9CF /* Constant.swift in Sources */,
 				40FA6DDA2A7B0ED300992D40 /* ProductModel.swift in Sources */,
 				408651EA2A88E2F000EDDEE2 /* DummyJSONToModel.swift in Sources */,
 			);
@@ -299,6 +304,7 @@
 			files = (
 				40FA6DEB2A7B206300992D40 /* ProductModel.swift in Sources */,
 				408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */,
+				408472872A89960600D2E9CF /* Constant.swift in Sources */,
 				40FA6DEA2A7B205F00992D40 /* ProductListViewModel.swift in Sources */,
 				40E5FBEA2A88ED7D0024DF56 /* DummyJSONToModel.swift in Sources */,
 				408651C62A7EE07500EDDEE2 /* ProductService.swift in Sources */,

@@ -16,7 +16,7 @@ enum APIError: Error {
     case network
 
     // Add more error cases as per your requirements
-
+    
 }
 
 
@@ -30,8 +30,8 @@ extension APIError {
         switch self {
 
         case let .requestFailed(error):
-            // If user has no internet conenction then error code is -1020. And the default message is A data connection is not currently allowed. Rather this message more convinent "The internet connection appears to be offline."
-            if error.errorCode == -1020 {
+
+            if error.errorCode == Constant.ErrorCode.offline {
                 errorString = "Internet conenction appears to be offline."
             } else {
                 errorString = error.localizedDescription
