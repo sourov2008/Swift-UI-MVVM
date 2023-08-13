@@ -10,6 +10,8 @@
 
 import Foundation
 
+import Foundation
+
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -18,8 +20,6 @@ enum HTTPMethod: String {
 }
 
 final class NetworkRouter {
-    typealias CompletionHandler<T> = (Result<T, APIError>) -> Void
-
     let baseURL: String
 
     init(baseURL: String) {
@@ -35,69 +35,63 @@ final class NetworkRouter {
         return request
     }
 
-    private func executeRequest<T: Decodable>(request: URLRequest, completion: @escaping CompletionHandler<T>) {
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { data, response, error in
-            do {
-                if error != nil {
-                    completion(.failure(.invalidData))
-                    return
-                }
+    private func executeRequest<T: Decodable>(request: URLRequest) async -> Result<T, APIError> {
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
 
-                /* While error we can use log files which may include relevant hardware and API-related information. Additionally, the logs can be sent to a server for further investigation when necessary.*/
-                
-                if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
-                    switch httpResponse.statusCode {
-                    case 200...299: // Success range
-                        let decodedData = try JSONDecoder().decode(T.self, from: data ?? Data())
-                        completion(.success(decodedData))
-                    case 400: // Bad Request
-                        completion(.failure(.invalidResponse))
-                    case 401: // Unauthorized
-                        // Handle unauthorized case, if applicable for your API
-                        completion(.failure(.invalidResponse))
-                    case 404: // Not Found
-                        // Handle not found case, if applicable for your API
-                        completion(.failure(.invalidResponse))
-                    default:
-                        // Handle other error cases with the specific error status code
-                        completion(.failure(.invalidResponse))
-                    }
-                } else {
-                    let decoder = JSONDecoder()
-                    let result = try decoder.decode(T.self, from: data!)
-                    completion(.success(result))
+            /* While error we can use log files which may include relevant hardware and API-related information. Additionally, the logs can be sent to a server for further investigation when necessary.*/
+
+            if let httpResponse = response as? HTTPURLResponse, !(200...299).contains(httpResponse.statusCode) {
+                switch httpResponse.statusCode {
+                case 200...299: // Success range
+                    let decodedData = try JSONDecoder().decode(T.self, from: data)
+                    return .success(decodedData)
+                case 400: // Bad Request
+                    return .failure(.invalidResponse)
+                case 401: // Unauthorized
+                    // Handle unauthorized case, if applicable for your API
+                    return .failure(.invalidResponse)
+                case 404: // Not Found
+                    // Handle not found case, if applicable for your API
+                    return .failure(.invalidResponse)
+                default:
+                    // Handle other error cases with the specific error status code
+                    return .failure(.invalidResponse)
                 }
-            } catch {
-                completion(.failure(.requestFailed(error)))
+            } else {
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                return .success(decodedData)
             }
+        } catch {
+            return .failure(.requestFailed(error))
         }
-        task.resume()
     }
-
 
     func sendRequest<T: Decodable>(path: String? = nil,
                                    method: HTTPMethod,
                                    parameters: [String: String]? = nil,
                                    headers: [String: String]? = nil,
-                                   body: Data? = nil,
-                                   completion: @escaping CompletionHandler<T>) {
-        guard var urlComponents = URLComponents(string: baseURL) else {
-            completion(.failure(.invalidURL))
-            return
-        }
+                                   body: Data? = nil) async -> Result<T, APIError> {
+        do {
+            guard var urlComponents = URLComponents(string: baseURL) else {
+                throw APIError.invalidURL
+            }
 
-        urlComponents.path = path ?? ""
-        if let parameters = parameters {
-            urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-        }
+            urlComponents.path = path ?? ""
+            if let parameters = parameters {
+                urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+            }
 
-        guard let url = urlComponents.url else {
-            completion(.failure(.invalidURL))
-            return
-        }
+            guard let url = urlComponents.url else {
+                throw APIError.invalidURL
+            }
 
-        let request = buildRequest(url: url, method: method, headers: headers, body: body)
-        executeRequest(request: request, completion: completion)
+            let request = buildRequest(url: url, method: method, headers: headers, body: body)
+            return await executeRequest(request: request)
+        } catch {
+            return .failure(.requestFailed(error))
+        }
     }
+    
+    
 }

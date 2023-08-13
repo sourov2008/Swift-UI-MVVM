@@ -9,14 +9,24 @@ import Foundation
 
 class MockProductService: ServiceProtocol {
     
-    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
-
+    func fetchData() async -> Result<ProductModel, APIError> {
         guard let sampleData: ProductModel = readJSONFromFile(fileName: "SamplePost")else {
-            completion(.failure(.invalidData))
-            return
+            return.failure(.invalidData)
+            
         }
-        completion(.success(sampleData))
+        return .success(sampleData)
 
     }
+    
+    
+//    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) {
+//
+//        guard let sampleData: ProductModel = readJSONFromFile(fileName: "SamplePost")else {
+//            completion(.failure(.invalidData))
+//            return
+//        }
+//        completion(.success(sampleData))
+//
+//    }
     
 }

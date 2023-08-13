@@ -8,11 +8,11 @@
 import XCTest
 @testable import BiolerplateV1 // Replace with your app name
 
-final class PostViewModelTests: XCTestCase {
+final class ProductListViewModelTests: XCTestCase {
 
     func testFetchPosts() async {
         // Given
-        let viewModel = PostViewModel(service: MockProductService())
+        let viewModel = ProductListViewModel(service: MockProductService())
 
         // When
         await viewModel.fetchPosts()
@@ -28,7 +28,7 @@ final class PostViewModelTests: XCTestCase {
         let mockError = APIError.invalidData
 
         let errorMockNetworking = ErrorMockService(mockError: mockError)
-        let viewModel = PostViewModel(service: errorMockNetworking)
+        let viewModel = ProductListViewModel(service: errorMockNetworking)
 
         // When
         await viewModel.fetchPosts()
@@ -42,13 +42,16 @@ final class PostViewModelTests: XCTestCase {
 }
 
 class ErrorMockService: ServiceProtocol {
+    
     let mockError: APIError
 
     init(mockError: APIError) {
         self.mockError = mockError
     }
 
-    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
-        completion(.failure(mockError))
+    func fetchData() async -> Result<ProductModel, APIError> {
+        return .failure(mockError)
     }
+
+    
 }

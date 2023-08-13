@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostListView: View {
     
-    @StateObject private var viewModel = PostViewModel(service: PostService())
+    @ObservedObject private var viewModel = ProductListViewModel(service: ProductService())
 
     var body: some View {
         NavigationView {
@@ -52,8 +52,8 @@ struct PostListView: View {
 
 struct PostListView_RealPreviews: PreviewProvider {
     static var previews: some View {
-        let viewModel = PostViewModel(service: MockProductService())
-        //        return PostListView().environmentObject(viewModel)
+        let viewModel = ProductListViewModel(service: MockProductService())
+        return PostListView().environmentObject(viewModel)
     }
 }
 
