@@ -10,20 +10,19 @@
 import Foundation
 
 protocol ServiceProtocol {
-    func fetchData(completion: @escaping (Result<[PostModel], APIError>) -> Void) async
+    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async
 }
 
 
 final class PostService: ServiceProtocol {
 
-    func fetchData(completion: @escaping (Result<[PostModel], APIError>) -> Void) async  {
-
-        let baseURL = "https://jsonplaceholder.typicode.com"
+    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
+        let baseURL = "https://app.check24.de/products-test.json"
         let router = NetworkRouter(baseURL: baseURL)
         
         /* You may pass necessary header, params etcs. */
          
-        router.sendRequest(path: "/posts", method: .get) { (result: Result<[PostModel], APIError>) in
+        router.sendRequest(path: "/products-test.json", method: .get) { (result: Result<ProductModel, APIError>) in
             switch result {
             case .success(let posts):
                 print("Users: \(posts)")

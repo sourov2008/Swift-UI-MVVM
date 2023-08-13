@@ -1,12 +1,46 @@
-[
-  {
+{
+"header": {
+"headerTitle": "Check24 Shape Compararison",
+"headerDescription": "List of geometric products"
+},
+"filters": [
+"Alle",
+"Verfügbar",
+"Vorgemerkt"
+],
+"products": [
+    {
+    "name": "Yellow Triangle",
+    "type": "Triangle",
     "id": 1,
-    "title": "Test Title 1",
-    "body": "Test Body 1"
-  },
-  {
-    "id": 2,
-    "title": "Test Title 2",
-    "body": "Test Body 2"
-  }
-]
+    "color": "Yellow",
+    "imageURL": "https://kredit.check24.de/konto-kredit/ratenkredit/nativeapps/imgs/08.png",
+    "colorCode": "FFECB3",
+    "available": true,
+    "releaseDate": 1460629605,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+    "longDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+    "rating": 2.17,
+    "price": {
+        "value": 225.91,
+        "currency": "EUR"
+        }
+    },
+    {
+    "name": "Blue Circle",
+    "type": "Circle",
+    "id": 3,
+    "color": "Blue",
+    "imageURL": "https://kredit.check24.de/konto-kredit/ratenkredit/nativeapps/imgs/01.png",
+    "colorCode": "BBDEFB",
+    "available": false,
+    "releaseDate": 1458629605,
+    "description": "Lorem ipsum",
+    "longDescription": "Lorem ipsum\n\nLorem ipsum\n\nLorem ipsum\nLorem ipsum",
+    "rating": 4.71,
+    "price": {
+    "value": 1610.35,
+    "currency": "EUR"
+    }
+    }]
+}

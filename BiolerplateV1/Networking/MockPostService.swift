@@ -9,7 +9,7 @@ import Foundation
 
 class MockPostService: ServiceProtocol {
     
-    func fetchData(completion: @escaping (Result<[PostModel], APIError>) -> Void) async{
+    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
         guard let jsonData = readJSONFromFile(named: "SamplePost") else {
             completion(.failure(.invalidData))
             return
@@ -17,7 +17,7 @@ class MockPostService: ServiceProtocol {
         
         do {
             let decoder = JSONDecoder()
-            let sampleData = try decoder.decode([PostModel].self, from: jsonData)
+            let sampleData = try decoder.decode(ProductModel.self, from: jsonData)
             completion(.success(sampleData))
         } catch {
             print("Error decoding JSON data: \(error)")

@@ -18,7 +18,7 @@ final class PostViewModelTests: XCTestCase {
         await viewModel.fetchPosts()
 
         // Then
-        XCTAssertTrue(!viewModel.posts.isEmpty, "Posts should not be empty")
+        XCTAssertTrue(!viewModel.products.isEmpty, "Posts should not be empty")
         XCTAssertFalse(viewModel.isLoading, "isLoading should be false")
         XCTAssertTrue(viewModel.errorMessage.isEmpty, "errorMessage should be empty")
     }
@@ -34,7 +34,7 @@ final class PostViewModelTests: XCTestCase {
         await viewModel.fetchPosts()
 
         // Then
-        XCTAssertTrue(viewModel.posts.isEmpty, "Posts should be empty")
+        XCTAssertTrue(viewModel.products.isEmpty, "Posts should be empty")
         XCTAssertFalse(viewModel.isLoading, "isLoading should be false")
         XCTAssertEqual(viewModel.errorMessage, "Failed to fetch posts: \(mockError.getErrorMessage())", "errorMessage should match the error message")
         
@@ -48,7 +48,7 @@ class ErrorMockService: ServiceProtocol {
         self.mockError = mockError
     }
 
-    func fetchData(completion: @escaping (Result<[PostModel], APIError>) -> Void) async{
+    func fetchData(completion: @escaping (Result<ProductModel, APIError>) -> Void) async{
         completion(.failure(mockError))
     }
 }

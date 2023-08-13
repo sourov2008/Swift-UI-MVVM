@@ -23,10 +23,10 @@
 		40FA6DCE2A7B0E4D00992D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */; };
 		40FA6DD12A7B0E4D00992D40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */; };
 		40FA6DD82A7B0EB300992D40 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */; };
-		40FA6DDA2A7B0ED300992D40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* PostModel.swift */; };
+		40FA6DDA2A7B0ED300992D40 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* ProductModel.swift */; };
 		40FA6DE42A7B100A00992D40 /* BiolerplateV1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */; };
 		40FA6DEA2A7B205F00992D40 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */; };
-		40FA6DEB2A7B206300992D40 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* PostModel.swift */; };
+		40FA6DEB2A7B206300992D40 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,7 @@
 		40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40FA6DD72A7B0EB300992D40 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		40FA6DD92A7B0ED300992D40 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		40FA6DD92A7B0ED300992D40 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiolerplateV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolerplateV1Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +106,7 @@
 		40D06B8F2A7DA57D00210207 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DD92A7B0ED300992D40 /* PostModel.swift */,
+				40FA6DD92A7B0ED300992D40 /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */,
 				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
 				408651C42A7ECEB100EDDEE2 /* PostService.swift in Sources */,
-				40FA6DDA2A7B0ED300992D40 /* PostModel.swift in Sources */,
+				40FA6DDA2A7B0ED300992D40 /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40FA6DEB2A7B206300992D40 /* PostModel.swift in Sources */,
+				40FA6DEB2A7B206300992D40 /* ProductModel.swift in Sources */,
 				408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40FA6DEA2A7B205F00992D40 /* PostViewModel.swift in Sources */,
 				408651C62A7EE07500EDDEE2 /* PostService.swift in Sources */,
