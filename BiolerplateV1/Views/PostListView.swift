@@ -31,38 +31,41 @@ struct PostListView: View {
                 }
             }
             .navigationTitle("Posts")
-            .onAppear {
-                Task {
-                    await viewModel.fetchPosts()
-                }
-                
-            }
         }
     }
-
     
 }
 
 
-//struct PostListView_Previews: PreviewProvider {
+
+//struct PostListView_Mock_Previews: PreviewProvider {
 //    static var previews: some View {
-//        let viewModel = PostViewModel(networking: MockPostNetworkManager())
+//        // Use the mock service for previews
+//        let viewModel = PostViewModel(service: MockPostService())
 //        return PostListView().environmentObject(viewModel)
 //    }
 //}
 
 
-
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = PostViewModel(service: MockPostService())
-        viewModel.posts = [
-            PostModel(id: 1, title: "Test Title 1", body: "Test Body 1"),
-            PostModel(id: 2, title: "Test Title 2", body: "Test Body 2")
-        ]
-
         return PostListView().environmentObject(viewModel)
     }
 }
+
+
+
+//struct PostListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let viewModel = PostViewModel(service: MockPostService())
+//        viewModel.posts = [
+//            PostModel(id: 1, title: "Test Title 1", body: "Test Body 1"),
+//            PostModel(id: 2, title: "Test Title 2", body: "Test Body 2")
+//        ]
+//
+//        return PostListView().environmentObject(viewModel)
+//    }
+//}
 
 

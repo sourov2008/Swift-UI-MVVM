@@ -17,6 +17,9 @@ class PostViewModel: ObservableObject {
 
     init(service: ServiceProtocol) {
         self.service = service
+        Task {
+            await fetchPosts()
+        }
     }
     
     @MainActor func fetchPosts() async {
