@@ -24,23 +24,30 @@ import SwiftUI
                             
                             NavigationLink {
                                 DetailsView(viewModel: ProductDetailsViewModel(details: product)){ updatedProduct in
-                                    // Handle updated product (favorite status) from DetailsView
                                     viewModel.updateProduct(updatedProduct)
                                 }
                                 
                             } label: {
                                 
-                                VStack(alignment: .leading) {
-                                    Text(product.name)
-                                        .font(.headline)
-                                    Text(product.type)
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                    if (product.isFavorite == true) {
-                                        Image(systemName: "star.fill")
-                                            .foregroundColor(.yellow)
+                                VStack {
+                                    HStack    {
+                                        ProductImageView(product: product)
+                                        
+                                        VStack(alignment: .leading) {
+                                            Text(product.name)
+                                                .font(.headline)
+                                            Text(product.type)
+                                                .font(.subheadline)
+                                                .foregroundColor(.gray)
+                                            if (product.isFavorite == true) {
+                                                Image(systemName: "star.fill")
+                                                    .foregroundColor(.yellow)
+                                            }
+                                        }
+
                                     }
                                 }
+                                
                                 
                             }
            
@@ -55,6 +62,34 @@ import SwiftUI
     }
 
 
+struct ProductImageView : View {
+    
+    var product : Product
+    
+    var body: some View {
+        
+        AsyncImage(url: product.imageURL) { phase in
+            switch phase {
+            case .empty:
+                ProgressView()
+            case .success(let image):
+                image.resizable()
+                     .aspectRatio(contentMode: .fit)
+                     .frame(maxWidth: 60, maxHeight: 60)
+            case .failure:
+                Image(systemName: "photo")
+            @unknown default:
+                // Since the AsyncImagePhase enum isn't frozen,
+                // we need to add this currently unused fallback
+                // to handle any new cases that might be added
+                // in the future:
+                EmptyView()
+            }
+        }
+  
+    }
+    
+}
 
 //struct PostListView_Mock_Previews: PreviewProvider {
 //    static var previews: some View {

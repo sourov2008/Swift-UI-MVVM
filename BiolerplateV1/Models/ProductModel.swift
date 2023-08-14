@@ -21,7 +21,7 @@ struct Product: Codable, Identifiable {
     let name: String
     let type: String
     let color: String
-    let imageURL: String
+    let imageURL: URL
     let colorCode: String
     let available: Bool
     let releaseDate: Int
