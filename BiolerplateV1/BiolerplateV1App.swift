@@ -14,7 +14,7 @@ import SwiftUI
 struct BiolerplateV1App: App {
     var body: some Scene {
         WindowGroup {
-            PostListView()
+            ProductListView()
         }
     }
 }

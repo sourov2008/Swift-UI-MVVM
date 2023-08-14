@@ -33,16 +33,21 @@ class ProductListViewModel: ObservableObject {
                 self.products = data.products
                 isLoading = false
 
-
             case .failure(let error):
                 // Handle the APIError in the failure case
                 self.errorMessage = "Failed to fetch posts: \(error.getErrorMessage())"
                 isLoading = false
 
-
             }
 
-        
     }
+    
+    func updateProduct(_ updatedProduct: Product) {
+        guard let index = products.firstIndex(where: { $0.id == updatedProduct.id }) else {
+            return
+        }
+        products[index] = updatedProduct
+    }
+
     
 }

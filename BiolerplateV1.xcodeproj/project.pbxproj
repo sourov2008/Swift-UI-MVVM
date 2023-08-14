@@ -25,7 +25,7 @@
 		40D06B9B2A7DC06500210207 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B9A2A7DC06500210207 /* README.md */; };
 		40E5FBEA2A88ED7D0024DF56 /* DummyJSONToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */; };
 		40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DC92A7B0E4A00992D40 /* BiolerplateV1App.swift */; };
-		40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */; };
+		40FA6DCC2A7B0E4A00992D40 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DCB2A7B0E4A00992D40 /* ProductListView.swift */; };
 		40FA6DCE2A7B0E4D00992D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */; };
 		40FA6DD12A7B0E4D00992D40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */; };
 		40FA6DD82A7B0EB300992D40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */; };
@@ -59,7 +59,7 @@
 		40D06B9A2A7DC06500210207 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40FA6DC62A7B0E4A00992D40 /* BiolerplateV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiolerplateV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FA6DC92A7B0E4A00992D40 /* BiolerplateV1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolerplateV1App.swift; sourceTree = "<group>"; };
-		40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		40FA6DCB2A7B0E4A00992D40 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		40FA6DCD2A7B0E4D00992D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40FA6DD02A7B0E4D00992D40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		408651C92A7F04F600EDDEE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */,
+				40FA6DCB2A7B0E4A00992D40 /* ProductListView.swift */,
 				408651E62A88E0CD00EDDEE2 /* DetailsView.swift */,
 			);
 			path = Views;
@@ -292,7 +292,7 @@
 				40D06B982A7DBAD600210207 /* MockProductService.swift in Sources */,
 				408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */,
 				408651E72A88E0CD00EDDEE2 /* DetailsView.swift in Sources */,
-				40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */,
+				40FA6DCC2A7B0E4A00992D40 /* ProductListView.swift in Sources */,
 				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
 				408472892A899FF400D2E9CF /* ProductDetailsViewModel.swift in Sources */,
 				408651C42A7ECEB100EDDEE2 /* ProductService.swift in Sources */,
