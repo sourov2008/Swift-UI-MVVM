@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		408472862A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
 		408472872A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
+		408472892A899FF400D2E9CF /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */; };
 		408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
 		408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651BE2A7E8F9300EDDEE2 /* APIError.swift */; };
 		408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
 		408651C42A7ECEB100EDDEE2 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* ProductService.swift */; };
 		408651C62A7EE07500EDDEE2 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C32A7ECEB100EDDEE2 /* ProductService.swift */; };
 		408651C72A7EE08F00EDDEE2 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */; };
-		408651E72A88E0CD00EDDEE2 /* DetailsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651E62A88E0CD00EDDEE2 /* DetailsUIView.swift */; };
+		408651E72A88E0CD00EDDEE2 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651E62A88E0CD00EDDEE2 /* DetailsView.swift */; };
 		408651EA2A88E2F000EDDEE2 /* DummyJSONToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */; };
 		40D06B952A7DB6D700210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
 		40D06B962A7DB81200210207 /* SamplePost.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D06B902A7DB1D100210207 /* SamplePost.json */; };
@@ -46,11 +47,12 @@
 
 /* Begin PBXFileReference section */
 		408472852A89960600D2E9CF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		408651BE2A7E8F9300EDDEE2 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		408651C12A7ECE6E00EDDEE2 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		408651C32A7ECEB100EDDEE2 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		408651C52A7ED29100EDDEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		408651E62A88E0CD00EDDEE2 /* DetailsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUIView.swift; sourceTree = "<group>"; };
+		408651E62A88E0CD00EDDEE2 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyJSONToModel.swift; sourceTree = "<group>"; };
 		40D06B902A7DB1D100210207 /* SamplePost.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SamplePost.json; sourceTree = "<group>"; };
 		40D06B972A7DBAD600210207 /* MockProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductService.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */,
+				408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -96,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				40FA6DCB2A7B0E4A00992D40 /* PostListView.swift */,
-				408651E62A88E0CD00EDDEE2 /* DetailsUIView.swift */,
+				408651E62A88E0CD00EDDEE2 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,9 +291,10 @@
 				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40D06B982A7DBAD600210207 /* MockProductService.swift in Sources */,
 				408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */,
-				408651E72A88E0CD00EDDEE2 /* DetailsUIView.swift in Sources */,
+				408651E72A88E0CD00EDDEE2 /* DetailsView.swift in Sources */,
 				40FA6DCC2A7B0E4A00992D40 /* PostListView.swift in Sources */,
 				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
+				408472892A899FF400D2E9CF /* ProductDetailsViewModel.swift in Sources */,
 				408651C42A7ECEB100EDDEE2 /* ProductService.swift in Sources */,
 				408472862A89960600D2E9CF /* Constant.swift in Sources */,
 				40FA6DDA2A7B0ED300992D40 /* ProductModel.swift in Sources */,

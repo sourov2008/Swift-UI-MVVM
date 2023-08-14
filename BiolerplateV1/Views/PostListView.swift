@@ -19,15 +19,27 @@ struct PostListView: View {
                 } else if !viewModel.errorMessage.isEmpty {
                     Text(viewModel.errorMessage)
                 } else {
-                    List(viewModel.products) { post in
-                        VStack(alignment: .leading) {
-                            Text(post.name)
-                                .font(.headline)
-                            Text(post.type)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                    List(viewModel.products) { product in
+
+                        
+                        NavigationLink {
+                            DetailsView(viewModel: ProductDetailsViewModel(details: product))
+                            
+                        } label: {
+                            
+                            VStack(alignment: .leading) {
+                                Text(product.name)
+                                    .font(.headline)
+                                Text(product.type)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
+                            
+                            
                         }
+       
                     }
+                    
                 }
             }
             .navigationTitle("Products")
