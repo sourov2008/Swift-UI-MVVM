@@ -19,7 +19,7 @@ import SwiftUI
                     } else if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
                     } else {
-                        List(viewModel.products) { product in
+                        List(viewModel.productsData.products) { product in
 
                             
                             NavigationLink {

@@ -9,8 +9,6 @@
 
 import Foundation
 
-import Foundation
-
 struct Header: Codable {
     let headerTitle: String
     let headerDescription: String
@@ -42,7 +40,7 @@ struct ProductModel: Codable {
     
     let header: Header
     let filters: [String]
-    let products: [Product]
+    var products: [Product]
     
 }
 

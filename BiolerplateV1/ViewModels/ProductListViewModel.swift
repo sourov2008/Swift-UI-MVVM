@@ -9,7 +9,8 @@ import Foundation
 
 class ProductListViewModel: ObservableObject {
     
-    @Published var products: [Product] = []
+    @Published var productsData: ProductModel
+
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
 
@@ -17,6 +18,8 @@ class ProductListViewModel: ObservableObject {
 
     init(service: ServiceProtocol) {
         self.service = service
+        self.productsData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])// By initializing make productsData non optional
+
         Task {
             await fetchPosts()
         }
@@ -26,11 +29,11 @@ class ProductListViewModel: ObservableObject {
     @MainActor func fetchPosts() async {
         isLoading = true
 
-            let result =  await service.fetchData()
+        let result =  await service.fetchData()
             switch result {
             case .success(let data):
                 // Handle the successful case with the productModel
-                self.products = data.products
+                self.productsData = data
                 isLoading = false
 
             case .failure(let error):
@@ -43,10 +46,10 @@ class ProductListViewModel: ObservableObject {
     }
     
     func updateProduct(_ updatedProduct: Product) {
-        guard let index = products.firstIndex(where: { $0.id == updatedProduct.id }) else {
+        guard let index = productsData.products.firstIndex(where: { $0.id == updatedProduct.id }) else {
             return
         }
-        products[index] = updatedProduct
+        productsData.products[index] = updatedProduct
     }
 
     

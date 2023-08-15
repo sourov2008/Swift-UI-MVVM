@@ -18,7 +18,7 @@ final class ProductListViewModelTests: XCTestCase {
         await viewModel.fetchPosts()
 
         // Then
-        XCTAssertTrue(!viewModel.products.isEmpty, "Posts should not be empty")
+        XCTAssertTrue(!(viewModel.productsData.products.isEmpty ), "Posts should not be empty")
         XCTAssertFalse(viewModel.isLoading, "isLoading should be false")
         XCTAssertTrue(viewModel.errorMessage.isEmpty, "errorMessage should be empty")
     }
@@ -34,7 +34,7 @@ final class ProductListViewModelTests: XCTestCase {
         await viewModel.fetchPosts()
 
         // Then
-        XCTAssertTrue(viewModel.products.isEmpty, "Posts should be empty")
+        XCTAssertTrue(viewModel.productsData.products.isEmpty , "Posts should be empty")
         XCTAssertFalse(viewModel.isLoading, "isLoading should be false")
         XCTAssertEqual(viewModel.errorMessage, "Failed to fetch posts: \(mockError.getErrorMessage())", "errorMessage should match the error message")
         
