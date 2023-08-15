@@ -40,6 +40,7 @@ struct DetailsView: View {
                 
             }
             .navigationTitle("Product Details")
+            .navigationBarTitleDisplayMode(.inline)
             .padding(.all)
         }
     }
@@ -55,6 +56,7 @@ private struct AvailableProductView: View {
                 HStack{
                     Text(product.name)
                         .font(.headline)
+                        .foregroundColor(product.isFavorite ?? false ? .blue:.black )
                     Spacer()
                     Text(product.releaseDate.toDateFormatted(withFormat: Constant.dateFormat.dd_mm_yyyy))
                         .foregroundColor(.gray)
@@ -91,6 +93,8 @@ private struct UnavailableProductView: View {
             VStack(alignment: .leading) {
                 Text(product.name)
                     .font(.headline)
+                    .foregroundColor(product.isFavorite ?? false ? .blue:.black )
+
                 Text(product.description)
                     .font(.subheadline)
                     .foregroundColor(.gray)
