@@ -6,14 +6,12 @@
 //
 
 import Foundation
-
 class ProductListViewModel: ObservableObject {
     
     @Published var productsData: ProductModel
-
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
-
+    
     private let service: ServiceProtocol
 
     init(service: ServiceProtocol) {
@@ -47,7 +45,7 @@ class ProductListViewModel: ObservableObject {
     }
     
     private func updateArrayWithSavedFavouriteItems(){
-        
+                
         let favorite  = FavoriteUserDefaults.shared.favorites
 
         for item in favorite {
