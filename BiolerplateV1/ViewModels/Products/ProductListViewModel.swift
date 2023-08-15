@@ -26,7 +26,7 @@ class ProductListViewModel: ObservableObject {
     
     @MainActor func fetchPosts() async {
         isLoading = true
-
+        reset()
         let result =  await service.fetchData()
             switch result {
             case .success(let data):
@@ -37,11 +37,20 @@ class ProductListViewModel: ObservableObject {
 
             case .failure(let error):
                 // Handle the APIError in the failure case
-                self.errorMessage = "Failed to fetch posts: \(error.getErrorMessage())"
+                self.errorMessage = "Failed to fetch products: \(error.getErrorMessage())"
                 isLoading = false
 
             }
-
+    }
+    
+    private func reset(){
+        errorMessage = ""
+    }
+    
+    func reloadProdcut()  {
+        Task {
+            await fetchPosts()
+        }
     }
     
     private func updateArrayWithSavedFavouriteItems(){

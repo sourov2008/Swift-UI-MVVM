@@ -17,7 +17,9 @@ import SwiftUI
                 if viewModel.isLoading {
                         ProgressView()
                     } else if !viewModel.errorMessage.isEmpty {
-                        Text(viewModel.errorMessage)
+                        ErrorView(errorDescription: viewModel.errorMessage) {
+                            viewModel.reloadProdcut()
+                        }
                     } else {
                         List {
                             HeaderView(header: viewModel.productsData.header)
