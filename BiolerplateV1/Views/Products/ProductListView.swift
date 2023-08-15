@@ -30,7 +30,6 @@ import SwiftUI
                                 }
                             label: {
                                     ProductRowView(product: product)
-                                    
                                 }
                                 
                             }
@@ -41,8 +40,6 @@ import SwiftUI
                         }
                         .navigationTitle("Products")
                         //.navigationBarTitleDisplayMode(.inline)
-                        
-
                     }
                 
             }
@@ -69,29 +66,75 @@ struct ProductRowView: View {
     let product: Product
     
     var body: some View {
-        HStack(alignment: .center) {
-
-            if product.available == true {
-                ProductImageView(product: product)
+        
+        ZStack {
+            if product.isFavorite ?? false {
+                Color(hex: "#D1C4E9")
             }
             
+            if product.available == true {
+                AvailableProductView(product: product)
+            } else {
+                UnavailableProductView(product: product)
+            }
+            
+        }
+    }
+}
+
+struct AvailableProductView: View {
+    var product: Product
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            ProductImageView(product: product)
+            VStack(alignment: .leading, spacing: 12) {
+                HStack{
+                    Text(product.name)
+                        .font(.headline)
+                    Spacer()
+                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.dateFormat.dd_mm_yyyy))
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                }
+                Text(product.description)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+                HStack{
+                    Text("Preis:")
+                        .fontWeight(.semibold)
+                    Text(product.price.value.description)
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                    Text(product.price.currency)
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                    Spacer()
+                    Text("RATING")
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                }
+            }
+        }
+    }
+}
+
+struct UnavailableProductView: View {
+    var product: Product
+    
+    var body: some View {
+        HStack(alignment: .center) {
             VStack(alignment: .leading) {
                 Text(product.name)
                     .font(.headline)
-                Text(product.type)
+                Text(product.description)
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                if product.isFavorite == true {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                }
+                Text("RATING")
             }
-            
-            if product.available == false {
-                Spacer()
-                ProductImageView(product: product)
-            }
-
+            Spacer()
+            ProductImageView(product: product)
         }
     }
 }
@@ -110,10 +153,10 @@ struct ProductImageView : View {
             case .success(let image):
                 image.resizable()
                      .aspectRatio(contentMode: .fit)
-                     .frame(maxWidth: 60, maxHeight: 60)
+                     .frame(maxWidth: 40, maxHeight: 40)
             case .failure:
                 Image(systemName: "photo")
-                    .frame(width: 60, height: 60)
+                    .frame(maxWidth: 40, maxHeight: 40)
                     .font(.system(size: 50))
 
             @unknown default:

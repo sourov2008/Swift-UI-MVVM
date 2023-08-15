@@ -34,6 +34,10 @@
 		40FA6DEA2A7B205F00992D40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */; };
 		40FA6DEB2A7B206300992D40 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* ProductModel.swift */; };
 		40FB04B22A8B88B6008451FE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB04B12A8B88B6008451FE /* test.swift */; };
+		40FC08E52A8BA05300678EF8 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E42A8BA05300678EF8 /* IntExtension.swift */; };
+		40FC08E72A8BA25600678EF8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E62A8BA25600678EF8 /* ColorExtension.swift */; };
+		40FC08E92A8BB76000678EF8 /* FavoriteUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */; };
+		40FC08EE2A8BBA7B00678EF8 /* FavoriteUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,9 @@
 		40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiolerplateV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolerplateV1Tests.swift; sourceTree = "<group>"; };
 		40FB04B12A8B88B6008451FE /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		40FC08E42A8BA05300678EF8 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		40FC08E62A8BA25600678EF8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +98,8 @@
 		408651C82A7F04D100EDDEE2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */,
-				408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */,
+				40FC08ED2A8BBA5B00678EF8 /* Products */,
+				40FC08EF2A8BBA8900678EF8 /* Others */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -100,8 +107,7 @@
 		408651C92A7F04F600EDDEE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DCB2A7B0E4A00992D40 /* ProductListView.swift */,
-				408651E62A88E0CD00EDDEE2 /* DetailsView.swift */,
+				40FC08EB2A8BBA3600678EF8 /* Products */,
 				40FB04B12A8B88B6008451FE /* test.swift */,
 			);
 			path = Views;
@@ -110,8 +116,11 @@
 		408651E82A88E29C00EDDEE2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */,
 				408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */,
 				408472852A89960600D2E9CF /* Constant.swift */,
+				40FC08E42A8BA05300678EF8 /* IntExtension.swift */,
+				40FC08E62A8BA25600678EF8 /* ColorExtension.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -130,7 +139,7 @@
 		40D06B8F2A7DA57D00210207 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DD92A7B0ED300992D40 /* ProductModel.swift */,
+				40FC08EC2A8BBA5000678EF8 /* Products */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,7 +149,6 @@
 			children = (
 				40D06B9A2A7DC06500210207 /* README.md */,
 				40FA6DC82A7B0E4A00992D40 /* BiolerplateV1 */,
-				40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */,
 				40FA6DC72A7B0E4A00992D40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +193,40 @@
 				40FA6DE32A7B100A00992D40 /* BiolerplateV1Tests.swift */,
 			);
 			path = BiolerplateV1Tests;
+			sourceTree = "<group>";
+		};
+		40FC08EB2A8BBA3600678EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DCB2A7B0E4A00992D40 /* ProductListView.swift */,
+				408651E62A88E0CD00EDDEE2 /* DetailsView.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		40FC08EC2A8BBA5000678EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DD92A7B0ED300992D40 /* ProductModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		40FC08ED2A8BBA5B00678EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */,
+				408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		40FC08EF2A8BBA8900678EF8 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40FA6DD82A7B0EB300992D40 /* ProductListViewModel.swift in Sources */,
+				40FC08E52A8BA05300678EF8 /* IntExtension.swift in Sources */,
 				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40D06B982A7DBAD600210207 /* MockProductService.swift in Sources */,
 				40FB04B22A8B88B6008451FE /* test.swift in Sources */,
@@ -298,8 +341,10 @@
 				408651E72A88E0CD00EDDEE2 /* DetailsView.swift in Sources */,
 				40FA6DCC2A7B0E4A00992D40 /* ProductListView.swift in Sources */,
 				40FA6DCA2A7B0E4A00992D40 /* BiolerplateV1App.swift in Sources */,
+				40FC08E72A8BA25600678EF8 /* ColorExtension.swift in Sources */,
 				408472892A899FF400D2E9CF /* ProductDetailsViewModel.swift in Sources */,
 				408651C42A7ECEB100EDDEE2 /* ProductService.swift in Sources */,
+				40FC08E92A8BB76000678EF8 /* FavoriteUserDefaults.swift in Sources */,
 				408472862A89960600D2E9CF /* Constant.swift in Sources */,
 				40FA6DDA2A7B0ED300992D40 /* ProductModel.swift in Sources */,
 				408651EA2A88E2F000EDDEE2 /* DummyJSONToModel.swift in Sources */,
@@ -318,6 +363,7 @@
 				408651C62A7EE07500EDDEE2 /* ProductService.swift in Sources */,
 				40FA6DE42A7B100A00992D40 /* BiolerplateV1Tests.swift in Sources */,
 				408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */,
+				40FC08EE2A8BBA7B00678EF8 /* FavoriteUserDefaults.swift in Sources */,
 				40D06B992A7DBFE200210207 /* MockProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

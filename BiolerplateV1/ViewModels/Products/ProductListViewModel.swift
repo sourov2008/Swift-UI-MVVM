@@ -34,6 +34,7 @@ class ProductListViewModel: ObservableObject {
             case .success(let data):
                 // Handle the successful case with the productModel
                 self.productsData = data
+                updateArrayWithSavedFavouriteItems()
                 isLoading = false
 
             case .failure(let error):
@@ -43,6 +44,17 @@ class ProductListViewModel: ObservableObject {
 
             }
 
+    }
+    
+    private func updateArrayWithSavedFavouriteItems(){
+        
+        let favorite  = FavoriteUserDefaults.shared.favorites
+
+        for item in favorite {
+            if let index = productsData.products.firstIndex(where: { $0.id == item.id }) {
+                productsData.products[index] = item
+            }
+        }
     }
     
     func markAsFavUnfavourite(_ updatedProduct: Product) {

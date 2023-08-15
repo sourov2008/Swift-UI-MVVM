@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 class ProductDetailsViewModel: ObservableObject {
     
     @Published var details: Product
@@ -21,8 +19,11 @@ class ProductDetailsViewModel: ObservableObject {
     func toggleFavorite() {
         if details.isFavorite == nil || details.isFavorite == false{
             details.isFavorite = true
+            FavoriteUserDefaults.shared.addFavorite(details)
         }else{
             details.isFavorite = false
+            FavoriteUserDefaults.shared.removeFavorite(details)
+
         }
     }
     
