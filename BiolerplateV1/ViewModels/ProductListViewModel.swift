@@ -45,7 +45,7 @@ class ProductListViewModel: ObservableObject {
 
     }
     
-    func updateProduct(_ updatedProduct: Product) {
+    func markAsFavUnfavourite(_ updatedProduct: Product) {
         guard let index = productsData.products.firstIndex(where: { $0.id == updatedProduct.id }) else {
             return
         }

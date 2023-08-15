@@ -13,54 +13,89 @@ import SwiftUI
 
         var body: some View {
             NavigationView {
-                VStack {
-                    if viewModel.isLoading {
+
+                if viewModel.isLoading {
                         ProgressView()
                     } else if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
                     } else {
-                        List(viewModel.productsData.products) { product in
-
+                        List {
+                            HeaderView(header: viewModel.productsData.header)
                             
-                            NavigationLink {
-                                DetailsView(viewModel: ProductDetailsViewModel(details: product)){ updatedProduct in
-                                    viewModel.updateProduct(updatedProduct)
-                                }
-                                
-                            } label: {
-                                
-                                VStack {
-                                    HStack    {
-                                        ProductImageView(product: product)
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(product.name)
-                                                .font(.headline)
-                                            Text(product.type)
-                                                .font(.subheadline)
-                                                .foregroundColor(.gray)
-                                            if (product.isFavorite == true) {
-                                                Image(systemName: "star.fill")
-                                                    .foregroundColor(.yellow)
-                                            }
-                                        }
-
+                            ForEach(viewModel.productsData.products) { product in
+                                NavigationLink {
+                                    DetailsView(viewModel: ProductDetailsViewModel(details: product)) { updatedProduct in
+                                        viewModel.markAsFavUnfavourite(updatedProduct)
                                     }
                                 }
-                                
+                            label: {
+                                    ProductRowView(product: product)
+                                    
+                                }
                                 
                             }
-           
+                            Link("Ⓒ 2016 Check24", destination: URL(string: "https://www.check24.de/popup/datenschutz-check24-gmbh/")!)
+                                .foregroundColor(.blue)
+                                .italic()
+                            // I forgot the exact link
                         }
+                        .navigationTitle("Products")
+                        //.navigationBarTitleDisplayMode(.inline)
                         
+
                     }
-                }
-                .navigationTitle("Products")
+                
             }
         }
-        
+
     }
 
+
+struct HeaderView: View {
+    let header: Header
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(header.headerTitle)
+                .fontWeight(.semibold)
+            Text(header.headerDescription)
+                .foregroundColor(.gray)
+        }
+        .padding(.vertical, 10)
+    }
+}
+
+struct ProductRowView: View {
+    let product: Product
+    
+    var body: some View {
+        HStack(alignment: .center) {
+
+            if product.available == true {
+                ProductImageView(product: product)
+            }
+            
+            VStack(alignment: .leading) {
+                Text(product.name)
+                    .font(.headline)
+                Text(product.type)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                if product.isFavorite == true {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                }
+            }
+            
+            if product.available == false {
+                Spacer()
+                ProductImageView(product: product)
+            }
+
+        }
+    }
+}
+ 
 
 struct ProductImageView : View {
     
@@ -78,30 +113,23 @@ struct ProductImageView : View {
                      .frame(maxWidth: 60, maxHeight: 60)
             case .failure:
                 Image(systemName: "photo")
+                    .frame(width: 60, height: 60)
+                    .font(.system(size: 50))
+
             @unknown default:
                 // Since the AsyncImagePhase enum isn't frozen,
                 // we need to add this currently unused fallback
                 // to handle any new cases that might be added
                 // in the future:
-                EmptyView()
+                Image(systemName: "photo")
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 60, height: 60)
             }
         }
   
     }
     
 }
-
-//struct PostListView_Mock_Previews: PreviewProvider {
-//    static var previews: some View {
-//        // Use the mock service for previews
-//        let data = ProductDummyModel.product
-//        let viewModel = PostViewModel(service: MockProductService())
-//
-//        let viewModel = data.products
-//        return PostListView().environmentObject(viewModel)
-//    }
-//}
-
 
 struct PostListView_RealPreviews: PreviewProvider {
     static var previews: some View {
