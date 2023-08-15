@@ -116,7 +116,6 @@
 		408651E82A88E29C00EDDEE2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */,
 				408651E92A88E2F000EDDEE2 /* DummyJSONToModel.swift */,
 				408472852A89960600D2E9CF /* Constant.swift */,
 				40FC08E42A8BA05300678EF8 /* IntExtension.swift */,
@@ -149,6 +148,7 @@
 			children = (
 				40D06B9A2A7DC06500210207 /* README.md */,
 				40FA6DC82A7B0E4A00992D40 /* BiolerplateV1 */,
+				40FA6DE22A7B100A00992D40 /* BiolerplateV1Tests */,
 				40FA6DC72A7B0E4A00992D40 /* Products */,
 			);
 			sourceTree = "<group>";
