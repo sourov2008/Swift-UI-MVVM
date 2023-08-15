@@ -18,5 +18,8 @@ struct Constant {
         static let dd_mm_yyyy = "dd.MM.yyyy"
     }
     
-    
+    struct URL {
+        static let baseUrl = "https://app.check24.de"
+    }
+ 
 }

@@ -38,8 +38,8 @@ final class ProductService: ServiceProtocol {
 //    }
     
     func fetchData() async -> Result<ProductModel, APIError> {
-        let baseURL = "https://app.check24.de"
-        let router = NetworkRouter(baseURL: baseURL)
+
+        let router = NetworkRouter(baseURL: Constant.URL.baseUrl)
         
         do {
             let result: Result<ProductModel, APIError> =  await router.sendRequest(path: "/products-test.json", method: .get)
