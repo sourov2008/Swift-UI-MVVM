@@ -39,6 +39,7 @@
 		40FC08E92A8BB76000678EF8 /* FavoriteUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */; };
 		40FC08EE2A8BBA7B00678EF8 /* FavoriteUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */; };
 		40FC08F12A8BCC0D00678EF8 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08F02A8BCC0D00678EF8 /* DoubleExtension.swift */; };
+		40FC08F32A8BF21C00678EF8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08F22A8BF21C00678EF8 /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		40FC08E62A8BA25600678EF8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		40FC08E82A8BB76000678EF8 /* FavoriteUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUserDefaults.swift; sourceTree = "<group>"; };
 		40FC08F02A8BCC0D00678EF8 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		40FC08F22A8BF21C00678EF8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				40FC08E42A8BA05300678EF8 /* IntExtension.swift */,
 				40FC08F02A8BCC0D00678EF8 /* DoubleExtension.swift */,
 				40FC08E62A8BA25600678EF8 /* ColorExtension.swift */,
+				40FC08F22A8BF21C00678EF8 /* RatingView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				40FA6DD82A7B0EB300992D40 /* ProductListViewModel.swift in Sources */,
 				40FC08F12A8BCC0D00678EF8 /* DoubleExtension.swift in Sources */,
 				40FC08E52A8BA05300678EF8 /* IntExtension.swift in Sources */,
+				40FC08F32A8BF21C00678EF8 /* RatingView.swift in Sources */,
 				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40D06B982A7DBAD600210207 /* MockProductService.swift in Sources */,
 				40FB04B22A8B88B6008451FE /* test.swift in Sources */,

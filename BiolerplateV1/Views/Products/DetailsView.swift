@@ -12,25 +12,93 @@ struct DetailsView: View {
     var onFavoriteChanged: ((Product) -> Void)?
 
     var body: some View {
-        VStack {
-            Text(viewModel.details.name)
-                .font(.headline)
-            Text(viewModel.details.type)
-                .font(.subheadline)
-                .foregroundColor(.gray)
-            
-            Button(action: {
-                viewModel.toggleFavorite()
-                // Notify the callback when the favorite status changes
-                onFavoriteChanged?(viewModel.details)
+        ScrollView {
+            VStack (spacing: 16){
 
-            }, label: {
-                Text(viewModel.details.isFavorite ?? false ? "Remove from Favorites" : "Mark as Favorite")
-                    .foregroundColor(.blue)
-            })
-            
+                if viewModel.details.available == true {
+                    AvailableProductView(product: viewModel.details)
+                } else {
+                    UnavailableProductView(product: viewModel.details)
+                }
+                
+                Button(action: {
+                    viewModel.toggleFavorite()
+                    // Notify the callback when the favorite status changes
+                    onFavoriteChanged?(viewModel.details)
+
+                }, label: {
+                    Text(viewModel.details.isFavorite ?? false ? "Remove from Favorites" : "Mark as Favorite")
+                        .foregroundColor(.blue)
+                })
+                
+                VStack (alignment: .leading, spacing: 16){
+                    Text("Description")
+                        .fontWeight(.bold)
+                    Text(viewModel.details.longDescription)
+
+                }
+                
+            }
+            .navigationTitle("Product Details")
+            .padding(.all)
         }
-        .navigationTitle("Product Details")
+    }
+}
+
+private struct AvailableProductView: View {
+    var product: Product
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            ProductImageView(product: product)
+            VStack(alignment: .leading, spacing: 12) {
+                HStack{
+                    Text(product.name)
+                        .font(.headline)
+                    Spacer()
+                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.dateFormat.dd_mm_yyyy))
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                }
+                HStack{
+                    Text("Preis:")
+                        .fontWeight(.semibold)
+                    Text(product.price.value.description)
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                    Text(product.price.currency)
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                }
+
+                RatingView(rating: product.rating.roundedDownToNearestHalf())
+                
+                Text(product.description)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+
+            }
+        }
+    }
+}
+
+private struct UnavailableProductView: View {
+    var product: Product
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            VStack(alignment: .leading) {
+                Text(product.name)
+                    .font(.headline)
+                Text(product.description)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                RatingView(rating: product.rating.roundedDownToNearestHalf())
+            }
+            Spacer()
+            ProductImageView(product: product)
+        }
     }
 }
 
