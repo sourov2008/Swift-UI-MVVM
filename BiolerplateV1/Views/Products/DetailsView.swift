@@ -38,6 +38,11 @@ struct DetailsView: View {
 
                 }
                 
+                Link("Ⓒ 2016 Check24", destination: URL(string: "https://www.check24.de/popup/datenschutz-check24-gmbh/")!)
+                    .foregroundColor(.blue)
+                    .italic()
+
+                
             }
             .navigationTitle("Product Details")
             .navigationBarTitleDisplayMode(.inline)
