@@ -111,9 +111,7 @@ struct AvailableProductView: View {
                         .foregroundColor(.gray)
                         .font(.footnote)
                     Spacer()
-                    Text("RATING")
-                        .foregroundColor(.gray)
-                        .font(.footnote)
+                    RatingView(rating: product.rating.roundedDownToNearestHalf())
                 }
             }
         }
@@ -131,7 +129,7 @@ struct UnavailableProductView: View {
                 Text(product.description)
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                Text("RATING")
+                RatingView(rating: product.rating.roundedDownToNearestHalf())
             }
             Spacer()
             ProductImageView(product: product)
@@ -139,6 +137,35 @@ struct UnavailableProductView: View {
     }
 }
  
+struct RatingView: View {
+    var rating: Double
+    
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(0..<5) { index in
+                Image(systemName: self.imageName(for: index))
+                    .foregroundColor(.yellow)
+            }
+        }
+    }
+    
+    private func imageName(for index: Int) -> String {
+        let filledCount = Int(rating)
+        
+        if index < filledCount {
+            return "star.fill"
+        } else if index == filledCount {
+            if rating - Double(filledCount) >= 0.25 {
+                return "star.lefthalf.fill"
+            } else {
+                return "star"
+            }
+        }
+        
+        return "star"
+    }
+}
+
 
 struct ProductImageView : View {
     
