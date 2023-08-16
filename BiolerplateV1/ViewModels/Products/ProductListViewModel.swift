@@ -79,7 +79,7 @@ class ProductListViewModel: ObservableObject {
     
     private func updateArrayWithSavedFavouriteItems(){
                 
-        let favorite  = FavoriteUserDefaults.shared.favorites
+        let favorite  = FavoriteService.shared.favorites
         for item in favorite {
             if let index = productsData.products.firstIndex(where: { $0.id == item.id }) {
                 productsData.products[index] = item

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class FavoriteUserDefaults {
+class FavoriteService {
     
-    static let shared = FavoriteUserDefaults()
+    static let shared = FavoriteService()
     
     private let favoritesKey = "favorites"
     
