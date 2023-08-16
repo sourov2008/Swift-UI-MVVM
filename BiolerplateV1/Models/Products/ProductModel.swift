@@ -9,12 +9,12 @@
 
 import Foundation
 
-struct Header: Codable {
+struct Header: Codable , Equatable{
     let headerTitle: String
     let headerDescription: String
 }
 
-struct Product: Codable, Identifiable {
+struct Product: Codable, Identifiable , Equatable{
     let id: Int
     let name: String
     let type: String
@@ -31,12 +31,12 @@ struct Product: Codable, Identifiable {
 
 }
 
-struct Price: Codable {
+struct Price: Codable , Equatable{
     let value: Double
     let currency: String
 }
 
-struct ProductModel: Codable {
+struct ProductModel: Codable, Equatable {
     
     let header: Header
     let filters: [String]

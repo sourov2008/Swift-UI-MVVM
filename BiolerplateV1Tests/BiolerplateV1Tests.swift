@@ -39,6 +39,23 @@ final class ProductListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.errorMessage, "Failed to fetch products: \(mockError.getErrorMessage())", "errorMessage should match the error message")
         
     }
+    
+    // pass means updated successsfully added into product array.
+    func testMarkAsFavUnfavorite() async  {
+        
+        let viewModel = ProductListViewModel(service: MockProductService())
+        await viewModel.fetchProducts()
+        
+        guard var product = viewModel.productsData.products.first else {
+            return
+        }
+        
+        product.isFavorite = false // Mark as unfavourite
+        
+        viewModel.markAsFavouriteUnfavourite(updatedProduct: product)
+        let isAvilableUpdatedProduct = viewModel.productsData.products.contains(product)
+        XCTAssertTrue(isAvilableUpdatedProduct, "Failed to mark as favorite or unfavorite")
+    }
 }
 
 class ErrorMockService: ServiceProtocol {
