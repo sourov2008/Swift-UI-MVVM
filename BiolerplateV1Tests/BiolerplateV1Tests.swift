@@ -10,12 +10,12 @@ import XCTest
 
 final class ProductListViewModelTests: XCTestCase {
 
-    func testFetchPosts() async {
+    func testFetchProducts() async {
         // Given
         let viewModel = ProductListViewModel(service: MockProductService())
 
         // When
-        await viewModel.fetchPosts()
+        await viewModel.fetchProducts()
 
         // Then
         XCTAssertTrue(!(viewModel.productsData.products.isEmpty ), "Posts should not be empty")
@@ -23,7 +23,7 @@ final class ProductListViewModelTests: XCTestCase {
         XCTAssertTrue(viewModel.errorMessage.isEmpty, "errorMessage should be empty")
     }
 
-    func testFetchPostsWithError() async {
+    func testFetchProductsWithError() async {
         // Given
         let mockError = APIError.invalidData
 
@@ -31,7 +31,7 @@ final class ProductListViewModelTests: XCTestCase {
         let viewModel = ProductListViewModel(service: errorMockNetworking)
 
         // When
-        await viewModel.fetchPosts()
+        await viewModel.fetchProducts()
 
         // Then
         XCTAssertTrue(viewModel.productsData.products.isEmpty , "Posts should be empty")

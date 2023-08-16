@@ -71,6 +71,7 @@ import SwiftUI
                             .navigationTitle("Products")
                             .navigationBarTitleDisplayMode(.inline)
                             .listStyle(.plain)
+
                         }
 
                 }

@@ -28,12 +28,12 @@ class ProductListViewModel: ObservableObject {
         self.mainProductData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])
 
         Task {
-            await fetchPosts()
+            await fetchProducts()
         }
     }
     
     
-    @MainActor func fetchPosts() async {
+    @MainActor func fetchProducts() async {
         isLoading = true
         reset()
         let result =  await service.fetchData()
@@ -58,7 +58,7 @@ class ProductListViewModel: ObservableObject {
     
     func reloadProdcut()  {
         Task {
-            await fetchPosts()
+            await fetchProducts()
         }
     }
     
