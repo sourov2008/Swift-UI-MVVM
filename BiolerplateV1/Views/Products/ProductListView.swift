@@ -14,59 +14,90 @@ import SwiftUI
 
         var body: some View {
             NavigationView {
+                
+                ZStack {
+                    Color.blue.opacity(0.2)
+                    .ignoresSafeArea(.all)
+                    
 
-                if viewModel.isLoading {
+                    if viewModel.isLoading {
                         ProgressView()
-                    } else if !viewModel.errorMessage.isEmpty {
+                    }
+                    else if !viewModel.errorMessage.isEmpty {
                         ErrorView(errorDescription: viewModel.errorMessage) {
                             viewModel.reloadProdcut()
                         }
-                    } else {
-                        List {
-                            
-                            SegmentedPickerView(selectedFilterItem: $viewModel.selectedFilterItem)
-                            
-                            HeaderView(header: viewModel.productsData.header)
-                            
-                            ForEach(viewModel.productsData.products) { product in
-                                NavigationLink {
-                                    DetailsView(viewModel: ProductDetailsViewModel(details: product)) { updatedProduct in
-                                        viewModel.markAsFavouriteUnfavourite(updatedProduct: updatedProduct)
-                                    }
-                                }
-                            label: {
-                                    ProductRowView(product: product)
-                                }
-                                
-                            }
-                            Link("Ⓒ 2016 Check24", destination: URL(string: "https://www.check24.de/popup/datenschutz-check24-gmbh/")!)
-                                .foregroundColor(.blue)
-                                .italic()
-                            // I forgot the exact link
-                        }
-                        .navigationTitle("Products")
-                        //.navigationBarTitleDisplayMode(.inline)
                     }
+                    else {
+                                
+                        VStack(alignment: .leading){
+                            SegmentedPickerView(selectedFilterItem: $viewModel.selectedFilterItem)
+                                .padding(.horizontal)
+                            
+                            List {
+                                
+                                HeaderView(header: viewModel.productsData.header)
+                                
+                                ForEach(viewModel.productsData.products) { product in
+                       
+                                    
+                                        ProductRowView(product: product)
+                                    
+                                        .listRowSeparatorTint(.clear)
+                                        .listRowBackground(Color.white.opacity(0.2))
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                        .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10)) // Adjust the insets
+                                    
+
+                                        .background(NavigationLink("", destination: {
+                                            DetailsView(viewModel: ProductDetailsViewModel(details: product)) { updatedProduct in
+                                                viewModel.markAsFavouriteUnfavourite(updatedProduct: updatedProduct)
+                                            }
+
+                                        }))
+                                                    
+                                }
+                                    
+                                    
+                                }
+                            .padding(.top, 10)
+                            Link("Ⓒ 2016 Check24", destination: URL(string: "https://www.check24.de/popup/datenschutz-check24-gmbh/")!)
+                                    // I forgot the exact link
+                                    .foregroundColor(.blue)
+                                    .italic()
+                                    .padding(.horizontal)
+                            }
+                            .navigationTitle("Products")
+                            .navigationBarTitleDisplayMode(.inline)
+                            .listStyle(.plain)
+                        }
+
+                }
+                    
+          }
                 
-            }
+      }
         }
 
-    }
+                                                            
 
 
 struct HeaderView: View {
     let header: Header
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            Color.gray
-            VStack{
-                Text(header.headerTitle)
-                    .fontWeight(.semibold)
-                Text(header.headerDescription)
-                    .foregroundColor(.black)}
-            }
-            .padding(.vertical, 10)
+
+        VStack(alignment:.leading, spacing: 10){
+            Text(header.headerTitle)
+                .fontWeight(.semibold)
+            Text(header.headerDescription)
+                .foregroundColor(.black)
+                .font(.system(size: 14))
+                .foregroundColor(.gray)
+        }
+        .padding(.vertical, 10)
+        
 
     }
 }
@@ -83,8 +114,11 @@ struct ProductRowView: View {
             
             if product.available == true {
                 AvailableProductView(product: product)
+                    .padding(.all)
             } else {
                 UnavailableProductView(product: product)
+                    .padding(.all)
+
             }
             
         }
@@ -132,7 +166,7 @@ private struct UnavailableProductView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 12) {
                 Text(product.name)
                     .font(.headline)
                 Text(product.description)
