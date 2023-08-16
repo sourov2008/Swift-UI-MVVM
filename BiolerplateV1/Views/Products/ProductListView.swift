@@ -31,7 +31,7 @@ import SwiftUI
                             ForEach(viewModel.productsData.products) { product in
                                 NavigationLink {
                                     DetailsView(viewModel: ProductDetailsViewModel(details: product)) { updatedProduct in
-                                        viewModel.markAsFavouriteUnfavourite(updatedProduct)
+                                        viewModel.markAsFavouriteUnfavourite(updatedProduct: updatedProduct)
                                     }
                                 }
                             label: {

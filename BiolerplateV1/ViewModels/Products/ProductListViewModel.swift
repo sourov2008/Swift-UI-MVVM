@@ -73,7 +73,6 @@ class ProductListViewModel: ObservableObject {
         }else if selectedItem == .favourite{
             
             let filteredItems = mainProductData.products.filter { $0.isFavorite ?? false }
-//            let filteredItems = mainProductData.products.filter { $0.isFavorite == true }
             productsData.products = filteredItems
         }
     }
@@ -91,14 +90,14 @@ class ProductListViewModel: ObservableObject {
         handlePickerSelectionChange()
     }
     
-    func markAsFavouriteUnfavourite(_ updatedProduct: Product) {
+    func markAsFavouriteUnfavourite(updatedProduct: Product) {
 
         guard let mainArrMatchIndex = mainProductData.products.firstIndex(where: { $0.id == updatedProduct.id }) else {
             return
         }
         mainProductData.products[mainArrMatchIndex] = updatedProduct
         handlePickerSelectionChange()
-
+        
     }
     
 }
