@@ -11,7 +11,7 @@ class FavoriteService {
     
     static let shared = FavoriteService()
     
-    private let favoritesKey = "favorites"
+    private let favoritesKey = Constant.UserDefault.favorites
     
      var favorites: [Product] {
         get {

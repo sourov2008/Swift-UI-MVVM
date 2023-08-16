@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		408427242A8C32F600C21010 /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408427232A8C32F600C21010 /* SegmentedPickerView.swift */; };
 		408427262A8C3A6900C21010 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408427252A8C3A6900C21010 /* Enums.swift */; };
+		408427272A8D17DB00C21010 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408427252A8C3A6900C21010 /* Enums.swift */; };
 		408472862A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
 		408472872A89960600D2E9CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472852A89960600D2E9CF /* Constant.swift */; };
 		408472892A899FF400D2E9CF /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408472882A899FF400D2E9CF /* ProductDetailsViewModel.swift */; };
@@ -393,6 +394,7 @@
 				408651C02A7E8F9300EDDEE2 /* APIError.swift in Sources */,
 				40FC08EE2A8BBA7B00678EF8 /* FavoriteService.swift in Sources */,
 				40D06B992A7DBFE200210207 /* MockProductService.swift in Sources */,
+				408427272A8D17DB00C21010 /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

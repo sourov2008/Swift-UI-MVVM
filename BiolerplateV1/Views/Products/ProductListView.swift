@@ -102,7 +102,7 @@ private struct AvailableProductView: View {
                     Text(product.name)
                         .font(.headline)
                     Spacer()
-                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.dateFormat.dd_mm_yyyy))
+                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.DateFormat.dd_mm_yyyy))
                         .foregroundColor(.gray)
                         .font(.footnote)
                 }

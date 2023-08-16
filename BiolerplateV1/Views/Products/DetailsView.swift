@@ -63,7 +63,7 @@ private struct AvailableProductView: View {
                         .font(.headline)
                         .foregroundColor(product.isFavorite ?? false ? .blue:.black )
                     Spacer()
-                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.dateFormat.dd_mm_yyyy))
+                    Text(product.releaseDate.toDateFormatted(withFormat: Constant.DateFormat.dd_mm_yyyy))
                         .foregroundColor(.gray)
                         .font(.footnote)
                 }

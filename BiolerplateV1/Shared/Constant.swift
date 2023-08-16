@@ -9,17 +9,21 @@ import Foundation
 
 
 struct Constant {
+    
     struct ErrorCode {
         static let offline = -1020
     }
     
-    
-    struct dateFormat {
+    struct DateFormat {
         static let dd_mm_yyyy = "dd.MM.yyyy"
     }
     
     struct URL {
         static let baseUrl = "https://app.check24.de"
+    }
+    
+    struct UserDefault {
+        static let favorites = "favorites"
     }
  
 }
