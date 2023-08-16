@@ -56,6 +56,7 @@ import SwiftUI
                                             }
 
                                         }))
+                                    
                                                     
                                 }
                                     
@@ -69,8 +70,11 @@ import SwiftUI
                                     .padding(.horizontal)
                             }
                             .navigationTitle("Products")
-                            .navigationBarTitleDisplayMode(.inline)
+                            //.navigationBarTitleDisplayMode(.inline)
                             .listStyle(.plain)
+                            .refreshable {
+                                viewModel.reloadProdcut()
+                            }
 
                         }
 

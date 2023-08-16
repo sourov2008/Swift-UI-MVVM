@@ -24,6 +24,7 @@ class ProductListViewModel: ObservableObject {
 
     init(service: ServiceProtocol) {
         self.service = service
+        
         self.productsData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])// By initializing make productsData non optional
         self.mainProductData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])
 
