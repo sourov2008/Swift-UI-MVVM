@@ -36,7 +36,6 @@ struct ErrorView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 20)
             
-            
             Button(action: reloadAction) {
                 Text("Reload")
                     .font(.headline)

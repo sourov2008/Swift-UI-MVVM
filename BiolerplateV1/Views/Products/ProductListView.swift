@@ -9,7 +9,8 @@ import SwiftUI
 
     struct ProductListView: View {
         
-        @ObservedObject private var viewModel = ProductListViewModel(service: ProductService())
+        @StateObject private var viewModel = ProductListViewModel(service: ProductService())
+        @State private var selectedItem = 0
 
         var body: some View {
             NavigationView {
@@ -22,12 +23,15 @@ import SwiftUI
                         }
                     } else {
                         List {
+                            
+                            SegmentedPickerView(selectedItem: $viewModel.selectedItem)
+                            
                             HeaderView(header: viewModel.productsData.header)
                             
                             ForEach(viewModel.productsData.products) { product in
                                 NavigationLink {
                                     DetailsView(viewModel: ProductDetailsViewModel(details: product)) { updatedProduct in
-                                        viewModel.markAsFavUnfavourite(updatedProduct)
+                                        viewModel.markAsFavouriteUnfavourite(updatedProduct)
                                     }
                                 }
                             label: {
@@ -54,13 +58,16 @@ struct HeaderView: View {
     let header: Header
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(header.headerTitle)
-                .fontWeight(.semibold)
-            Text(header.headerDescription)
-                .foregroundColor(.gray)
-        }
-        .padding(.vertical, 10)
+        ZStack(alignment: .leading) {
+            Color.gray
+            VStack{
+                Text(header.headerTitle)
+                    .fontWeight(.semibold)
+                Text(header.headerDescription)
+                    .foregroundColor(.black)}
+            }
+            .padding(.vertical, 10)
+
     }
 }
 

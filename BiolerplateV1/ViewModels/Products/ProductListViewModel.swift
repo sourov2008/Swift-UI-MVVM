@@ -12,11 +12,20 @@ class ProductListViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
     
+    private var mainProductData: ProductModel
+
+    @Published var selectedItem: ProductFilterType = .all {
+        didSet {
+            self.handlePickerSelectionChange()
+        }
+    }
+
     private let service: ServiceProtocol
 
     init(service: ServiceProtocol) {
         self.service = service
         self.productsData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])// By initializing make productsData non optional
+        self.mainProductData = ProductModel(header: Header(headerTitle: "", headerDescription: ""), filters: [], products: [])
 
         Task {
             await fetchPosts()
@@ -53,23 +62,45 @@ class ProductListViewModel: ObservableObject {
         }
     }
     
+    func handlePickerSelectionChange() {
+        print("Selected item: \(selectedItem)")
+        
+        if selectedItem == .all{
+            productsData = mainProductData
+        }else if selectedItem == .available{
+            let filteredItems = mainProductData.products.filter { $0.available }
+            productsData.products = filteredItems
+        }else if selectedItem == .favourite{
+            
+            let filteredItems = mainProductData.products.filter { $0.isFavorite ?? false }
+//            let filteredItems = mainProductData.products.filter { $0.isFavorite == true }
+            productsData.products = filteredItems
+        }
+    }
+    
     private func updateArrayWithSavedFavouriteItems(){
                 
         let favorite  = FavoriteUserDefaults.shared.favorites
-
         for item in favorite {
             if let index = productsData.products.firstIndex(where: { $0.id == item.id }) {
                 productsData.products[index] = item
             }
         }
+        // keep a copy of main product data
+        mainProductData = productsData
+        handlePickerSelectionChange()
     }
     
-    func markAsFavUnfavourite(_ updatedProduct: Product) {
-        guard let index = productsData.products.firstIndex(where: { $0.id == updatedProduct.id }) else {
+    func markAsFavouriteUnfavourite(_ updatedProduct: Product) {
+
+        guard let mainArrMatchIndex = mainProductData.products.firstIndex(where: { $0.id == updatedProduct.id }) else {
             return
         }
-        productsData.products[index] = updatedProduct
-    }
+        mainProductData.products[mainArrMatchIndex] = updatedProduct
+        handlePickerSelectionChange()
 
+    }
     
 }
+
+
