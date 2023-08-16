@@ -23,7 +23,7 @@ class ProductDetailsViewModel: ObservableObject {
         }else{
             details.isFavorite = false
             FavoriteService.shared.removeFavorite(details)
-
+            
         }
     }
     

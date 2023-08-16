@@ -24,7 +24,7 @@ import SwiftUI
                     } else {
                         List {
                             
-                            SegmentedPickerView(selectedItem: $viewModel.selectedItem)
+                            SegmentedPickerView(selectedFilterItem: $viewModel.selectedFilterItem)
                             
                             HeaderView(header: viewModel.productsData.header)
                             

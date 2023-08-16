@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SegmentedPickerView: View {
-    @Binding var selectedItem: ProductFilterType
+    @Binding var selectedFilterItem: ProductFilterType
         
     var body: some View {
         VStack {
  
-            Picker("", selection: $selectedItem) {
+            Picker("", selection: $selectedFilterItem) {
                 ForEach(ProductFilterType.allCases, id: \.self) { value in
                     Text(value.rawValue)
                 }
@@ -30,6 +30,6 @@ struct SegmentedPickerView: View {
 struct SegmentedPickerView_Previews: PreviewProvider {
 
     static var previews: some View {
-        SegmentedPickerView(selectedItem: .constant(.all))
+        SegmentedPickerView(selectedFilterItem: .constant(.all))
     }
 }

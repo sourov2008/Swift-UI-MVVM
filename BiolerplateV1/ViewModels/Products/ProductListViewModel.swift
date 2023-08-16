@@ -14,7 +14,7 @@ class ProductListViewModel: ObservableObject {
     
     private var mainProductData: ProductModel
 
-    @Published var selectedItem: ProductFilterType = .all {
+    @Published var selectedFilterItem: ProductFilterType = .all {
         didSet {
             self.handlePickerSelectionChange()
         }
@@ -63,15 +63,14 @@ class ProductListViewModel: ObservableObject {
     }
     
     func handlePickerSelectionChange() {
-        print("Selected item: \(selectedItem)")
+        print("Selected item: \(selectedFilterItem)")
         
-        if selectedItem == .all{
+        if selectedFilterItem == .all{
             productsData = mainProductData
-        }else if selectedItem == .available{
+        }else if selectedFilterItem == .available{
             let filteredItems = mainProductData.products.filter { $0.available }
             productsData.products = filteredItems
-        }else if selectedItem == .favourite{
-            
+        }else if selectedFilterItem == .favourite{
             let filteredItems = mainProductData.products.filter { $0.isFavorite ?? false }
             productsData.products = filteredItems
         }
