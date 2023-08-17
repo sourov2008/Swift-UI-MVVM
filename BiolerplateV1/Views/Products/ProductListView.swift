@@ -42,6 +42,8 @@ import SwiftUI
                        
                                     
                                         ProductRowView(product: product)
+                                        .animation(.easeInOut) // Apply animation to list item
+
                                     
                                         .listRowSeparatorTint(.clear)
                                         .listRowBackground(Color.white.opacity(0.2))
@@ -73,7 +75,9 @@ import SwiftUI
                             //.navigationBarTitleDisplayMode(.inline)
                             .listStyle(.plain)
                             .refreshable {
-                                viewModel.reloadProdcut()
+                                withAnimation {
+                                    viewModel.reloadProdcut()
+                                }
                             }
 
                         }
