@@ -58,7 +58,6 @@ import SwiftUI
                                             }
 
                                         }))
-                                    
                                                     
                                 }
                                     
@@ -75,8 +74,8 @@ import SwiftUI
                             //.navigationBarTitleDisplayMode(.inline)
                             .listStyle(.plain)
                             .refreshable {
-                                withAnimation {
-                                    viewModel.reloadProdcut()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                     viewModel.reloadProdcut()
                                 }
                             }
 
