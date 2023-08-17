@@ -26,4 +26,8 @@ struct Constant {
         static let favorites = "favorites"
     }
  
+    struct Color {
+        static let favorite = "#D1C4E9"
+    }
+    
 }
