@@ -26,7 +26,6 @@ struct SegmentedPickerView: View {
 }
 
 
-
 struct SegmentedPickerView_Previews: PreviewProvider {
 
     static var previews: some View {
