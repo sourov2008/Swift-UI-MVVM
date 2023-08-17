@@ -42,5 +42,24 @@
     "value": 1610.35,
     "currency": "EUR"
     }
-    }]
+    },
+    {
+    "name": "Red Square",
+    "type": "Square",
+    "id": 6,
+    "color": "Red",
+    "imageURL": "https://kredit.check24.de/konto-kredit/ratenkredit/nativeapps/imgs/04.png",
+    "colorCode": "ffCDD2",
+    "available": false,
+    "releaseDate": 1455629605,
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+    "longDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+    "rating": 2.2,
+    "price": {
+    "value": 82.93,
+    "currency": "EUR"
+    }
+    }
+
+]
 }

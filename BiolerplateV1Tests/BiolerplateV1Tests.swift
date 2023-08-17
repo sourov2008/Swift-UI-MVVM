@@ -41,6 +41,24 @@ final class ProductListViewModelTests: XCTestCase {
     }
     
     // pass means updated successsfully added into product array.
+    func testHandlePickerSelectionChange() async  {
+        
+        let viewModel = ProductListViewModel(service: MockProductService())
+        await viewModel.fetchProducts()
+        viewModel.selectedFilterItem = .available
+        
+        // before
+        let index = viewModel.productsData.products.filter{ $0.available == true }
+        
+        viewModel.handlePickerSelectionChange()
+        //after
+        let filtered = viewModel.productsData.products
+        
+        XCTAssertEqual(index.count, filtered.count, "Failed to filter item as available")
+    }
+
+    
+    // pass means updated successsfully added into product array.
     func testMarkAsFavUnfavorite() async  {
         
         let viewModel = ProductListViewModel(service: MockProductService())
@@ -49,7 +67,6 @@ final class ProductListViewModelTests: XCTestCase {
         guard var product = viewModel.productsData.products.first else {
             return
         }
-        
         product.isFavorite = false // Mark as unfavourite
         
         viewModel.markAsFavouriteUnfavourite(updatedProduct: product)
