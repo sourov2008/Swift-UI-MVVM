@@ -2,9 +2,10 @@
 //  Post.swift
 //  BiolerplateV1
 //
-//  Created by Shourob Datta on 3/8/23.
+//  Created by Shourob Datta on 16/8/23.
+
 // for model class creation you can use this. But not perfect.
-// best is use chatGpt
+// what I found best is use chatGpt
 
 
 import Foundation

@@ -1,8 +1,8 @@
 //
-//  BackendError.swift
-//  RME iOS
 //
-//  Created by Jonathan Müller on 25.11.21.
+//  
+//
+//  Created by Shourob Datta on 16/8/23.
 //
 
 import Foundation

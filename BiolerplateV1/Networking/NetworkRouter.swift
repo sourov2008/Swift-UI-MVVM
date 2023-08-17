@@ -2,7 +2,7 @@
 //  NetworkRouter.swift
 //  BiolerplateV1
 //
-//  Created by Shourob Datta on 5/8/23.
+//  Created by Shourob Datta on 16/8/23.
 //
 
 /* This class serves as a network manager and allows us to perform various operations such as get, post, put, and delete requests using a router. The error handling in this class is implemented effectively, ensuring that potential issues are dealt with properly. When working in a production environment, errors can be challenging to trace, but the class addresses this by leveraging httpResponse data to generate custom log files. These log files are tailored to include relevant hardware and API-related information. Additionally, the logs can be sent to a server for further investigation when necessary.

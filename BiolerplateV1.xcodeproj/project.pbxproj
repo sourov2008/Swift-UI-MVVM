@@ -38,7 +38,6 @@
 		40FA6DE42A7B100A00992D40 /* ProductListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DE32A7B100A00992D40 /* ProductListViewModelTests.swift */; };
 		40FA6DEA2A7B205F00992D40 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD72A7B0EB300992D40 /* ProductListViewModel.swift */; };
 		40FA6DEB2A7B206300992D40 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FA6DD92A7B0ED300992D40 /* ProductModel.swift */; };
-		40FB04B22A8B88B6008451FE /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB04B12A8B88B6008451FE /* test.swift */; };
 		40FC08E52A8BA05300678EF8 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E42A8BA05300678EF8 /* IntExtension.swift */; };
 		40FC08E72A8BA25600678EF8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E62A8BA25600678EF8 /* ColorExtension.swift */; };
 		40FC08E92A8BB76000678EF8 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC08E82A8BB76000678EF8 /* FavoriteService.swift */; };
@@ -83,7 +82,6 @@
 		40FA6DD92A7B0ED300992D40 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		40FA6DE12A7B100A00992D40 /* BiolerplateV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiolerplateV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FA6DE32A7B100A00992D40 /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
-		40FB04B12A8B88B6008451FE /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		40FC08E42A8BA05300678EF8 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		40FC08E62A8BA25600678EF8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		40FC08E82A8BB76000678EF8 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				40FC08EB2A8BBA3600678EF8 /* Products */,
-				40FB04B12A8B88B6008451FE /* test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,7 +367,6 @@
 				40FC08F32A8BF21C00678EF8 /* RatingView.swift in Sources */,
 				408651C22A7ECE6E00EDDEE2 /* NetworkRouter.swift in Sources */,
 				40D06B982A7DBAD600210207 /* MockProductService.swift in Sources */,
-				40FB04B22A8B88B6008451FE /* test.swift in Sources */,
 				408427242A8C32F600C21010 /* SegmentedPickerView.swift in Sources */,
 				408651BF2A7E8F9300EDDEE2 /* APIError.swift in Sources */,
 				408651E72A88E0CD00EDDEE2 /* DetailsView.swift in Sources */,
@@ -597,6 +593,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W58G8DF5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1Tests;
@@ -614,6 +611,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W58G8DF5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Datta.Shourob.BiolerplateV1Tests;
