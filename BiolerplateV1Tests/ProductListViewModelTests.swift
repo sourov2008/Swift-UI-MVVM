@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import BiolerplateV1 // Replace with your app name
+@testable import BiolerplateV1
 
 final class ProductListViewModelTests: XCTestCase {
 

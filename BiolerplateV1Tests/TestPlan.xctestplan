@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "B25EDA66-9484-459F-ACB0-4ECCAC2A2A13",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BiolerplateV1.xcodeproj",
+        "identifier" : "40FA6DE02A7B100A00992D40",
+        "name" : "BiolerplateV1Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
