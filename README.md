@@ -32,3 +32,6 @@ Write unit tests for the ViewModel to ensure it correctly handles the data and e
 ## Local API File Loading:
 Create a local JSON file with the sample JSON data.
 
+
+## Known exceptions/bugs:
+I used native  AsyncImage for image downloading. This methods is newly implemented. Sometimes cancel the request, and image loading failed. 
